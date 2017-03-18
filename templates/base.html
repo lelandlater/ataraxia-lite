@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+                <title>{{ title }}</title>
+                
+                <!-- links to CSS; CSS reset -->
+                <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}"/>
+                <link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}"/>
+                {% block links %}
+                
+                {% endblock %}
+                <!-- Google Fonts -->
+                <style>
+                    @import url('https://fonts.googleapis.com/css?family=Cardo|GFS+Didot');
+                    /* TODO: make the fonts good--Cardo and GFS Didot? */
+                </style>
+                </head>
+    
+    <body>
+        <section class="wrapper">
+            <nav>
+                <ul>
+                    {% for navitem in navitems %}
+                    {% if navitem.homelogo == True %}
+                    <li id="homelogo"><a href="{{ navitem.func_url }}"><h1>&#x3AC;&#x3C4;&#x3B1;&#x3C1;&#x3B1;&#x3BE;&#x3AF;&#x3B1;</h1></a></li>
+                    {% else %}
+                    <li class="navitem"><a href="{{ navitem.func_url }}"><h1>{{ navitem.label }}</h1></a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </nav>
+            <header class="layout-header">{% block header %}{% endblock %}</header>
+            <section class="main">
+                <div class="box sidebar" id="sidebar-left">{% block recent %}{% endblock %}</div>
+                
+                <div class="box" id="middle-spacing"><!-- main content -->{% block content %}{% endblock %}</div>
+                
+                <div class="box sidebar" id="sidebar-right">{% block info %}{% endblock %}</div>
+                
+            </section> <!-- end of main content -->
+            <footer>
+                <div class="footernav">
+                    <ul>
+                        {% for footernavitem in footernavitems %}
+                        {% if footernavitem.selected %}
+                        <li><a class="selected" href="{{ footernavitem.func_url }}"><h1>{{ footernavitem.label }}</h1><a></li>
+                        {% else %}
+                        <li><a href="{{ footernavitem.func_url }}"><h1>{{ footernavitem.label }}</h1></a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </footer>
+        </section>
+
+        {% block scripts %}
+        <script type="text/javascript">$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        {% endblock %}
+        
+    </body>
+</html>

@@ -1,0 +1,34 @@
+{# templates/contact.html #}
+{% extends "base.html" %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='text.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}"/>
+{% endblock %}
+
+{% block header %}
+<!-- ATARAXIA in Greek -->
+<h1 class="ataraxia-logo logo-medium ataraxia-primary">&#x3AC;&#x3C4;&#x3B1;&#x3C1;&#x3B1;&#x3BE;&#x3AF;&#x3B1;<sub class="beta subheading">contact</sub></h1>
+{% endblock %}
+
+{% block recent %}
+{% endblock %}
+
+{% block content %}
+<div class="writing ataraxia-text-color">
+    <br>
+    <header>About Me</header><br>
+    <p>23. Virgo. Single.</p>
+</div>
+<div id="contact-links">
+    <ul class="link-color">
+        <li><a href="https://github.com/lelandlater/ataraxia"><h1>GITHUB</h1></a></li>
+        <li id="twitter"><a href="https://twitter.com/lelandlater"><h1>TWITTER</h1></a></li>
+        <li id="linkedin"><a href="https://linkedin.com/in/lelandlater"><h1>LINKEDIN</h1></li>
+        <li><a href="mailto:lelandlater@gmail.com"><h1>EMAIL</h1></a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

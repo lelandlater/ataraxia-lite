@@ -1,0 +1,167 @@
+.ataraxia-primary{
+    color: #2A2A2A;
+}
+
+.ataraxia-secondary {
+    color: #F3F3F3;
+}
+
+.ataraxia-tertriary {
+    color: #D5D5D5;
+}
+
+.ataraxia-text-color {
+    color: #2A2A2A;
+}
+
+.ataraxia-logo {
+    font-family: 'GFS Didot', 'Times New Roman', serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-medium {
+    font-size: 72px;
+    margin-top: 48px;
+}
+
+.logo-large {
+    font-size: 144px;
+    margin-top: 48px;
+}
+
+#cue-entry:hover {
+    color: #AD6AEA;
+    -webkit-transition: all .35s ease 0s;
+    -moz-transition: all .35s ease 0s;
+    -o-transition: all .35s ease 0s;
+    transition: all .35s ease 0s;
+}
+
+.ataraxia-logo-inline {
+    font-family: 'GFS Didot';
+    font-weight: 700;
+}
+
+.beta {
+    font-size: 12px;
+    font-family: 'Helvetica';
+    font-weight: 100;
+}
+
+/* admin.index */
+#confirmation-sent-message,
+#already-exists-message {
+    display: none;
+    text-align: center;
+    color: #2A2A2A;
+    position: absolute;
+    top: 80%;
+    left: 18%;
+    z-index: 10;
+}
+
+/* admin.projects */
+#samplepack-download {
+ /*   display: none; */
+    text-align: center;
+    color: black;
+    position: absolute;
+    top: 80%;
+    left: 18%;
+    z-index: 10;
+}
+
+/* admin.contact */
+#contact-links {
+    list-style: none;
+    font-family: 'Helvetica';
+    font-size: 36px;
+    width: 200px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+#contact-links li {
+    list-style: none;
+    display: inline;
+}
+
+#contact-links ul li a {
+    text-decoration: none;
+    display: block;
+    color: #D5D5D5;
+    font-style: normal;
+    -webkit-transition: all .5s ease 0s;
+    -moz-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+#contact-links ul li a:hover {
+    text-decoration: none;
+    color: #2A2A2A;
+    font-style: normal;
+}
+
+#contact-links ul li#twitter a:hover {
+    color: #00ACED;
+}
+
+#contact-links ul li#linkedin a:hover {
+    color: #007bb6;
+}
+
+#known-issues-list {
+    font-family: 'Helvetica';
+    font-size: 72px;
+    color: #D5D5D5;
+    margin: 36px 0 0 72px;
+}
+
+.projects-list {
+    display: table;
+    margin: 4px auto;
+    border-collapse: separate;
+    border-spacing: 0 36px;
+}
+
+.projects-list th {
+    display: none;
+}
+
+.projects-list td {
+    padding: 0 24px;
+}
+
+.sample-pack-logo {
+    color: black;
+    font-family: 'Helvetica';
+    font-size: 36px;
+    font-weight: 800;
+    padding-top: 36px;
+}
+
+#admin-login {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#admin-login a {
+    text-decoration: none;
+    font-family: 'Helvetica';
+    font-weight: 600;
+    color: #F3F3F3;
+}
+
+/* for the admin interface on the blog */
+
+#blog-testing-features {
+    position: absolute;
+    top: 4px;
+    left: 360px;
+
+}
+
+

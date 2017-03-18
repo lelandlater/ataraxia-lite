@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: small;
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
+}
+
+.wrapper {
+    height: 100%;
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+
+.layout-header {
+    height: 72px;
+    margin-top: 12px;
+    vertical-align: baseline;
+}
+
+.main {
+    display: table;
+    width: 100%;
+    /* TODO: check typical browser settings and add(header,main,footer) &
+     can change per browser or device */
+    height: calc(100vh - 160px);
+}
+
+.box {
+    display: table-cell;
+}
+
+.sidebar {
+    width: 10%;
+}
+
+.centering-container {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+nav {
+    text-align: center;
+    line-height: 150%;
+    vertical-align: top;
+    width: 100%;
+    z-index: 100;
+}
+
+
+
+nav ul {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+
+}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Helvetica';
+    padding: 6px 12px;
+    color: #D5D5D5;
+    -webkit-transition: all .7s ease 0s;
+    -moz-transition: all .7s ease 0s;
+    -o-transition: all .7s ease 0s;
+    transition: all .7s ease 0s;
+}
+
+
+nav ul li a:hover {
+    -webkit-transition: all .35s ease 0s;
+    -moz-transition: all .35s ease 0s;
+    -o-transition: all .35s ease 0s;
+    transition: all .35s ease 0s;
+    color: #2A2A2A;
+    cursor: pointer;
+}
+
+nav #homelogo {
+    float: left;
+    list-style-type: none;
+    display: inline;
+    margin: 12px 8px 4px 16px;
+    font-size: 24px;
+    
+}
+
+
+nav .navitem {
+    float: right;
+    font-size: 18px;
+    margin: 14px 24px 0 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #D5D5D5;
+}
+
+/* Footer */
+
+.footernav {
+    text-align: center;
+    line-height: 150%;
+    vertical-align: top;
+    width: 100%;
+    
+}
+
+.footernav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+}
+
+.footernav ul li {
+    display: inline-block;
+}
+
+.footernav ul li a {
+    display: block;
+    padding: 6px 12px;
+    margin: 0 36px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Helvetica';
+    -webkit-transition: all .7s ease 0s;
+    -moz-transition: all .7s ease 0s;
+    -o-transition: all .7s ease 0s;
+    transition: all .7s ease 0s;
+    color: #D5D5D5;
+}
+
+.footernav ul li a:hover {
+    display: block;
+    background-color: white;
+    color: #2A2A2A;
+    -webkit-transition: all .35s ease 0s;
+    -moz-transition: all .35s ease 0s;
+    -o-transition: all .35s ease 0s;
+    transition: all .35s ease 0s;
+    cursor: pointer;
+}
+
+
+

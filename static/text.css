@@ -1,0 +1,160 @@
+.subheading {
+    font-size: 36px;
+    
+}
+
+.beta {
+    font-size: 12px;
+    font-family: 'Helvetica';
+    font-weight: 100;
+}
+
+
+.thick-header {
+    font-family: 'Helvetica';
+    font-weight: 900;
+    font-size: 96px;
+    letter-spacing: -6px;
+    margin-top: 36px;
+    
+}
+
+.bigger {
+    font-size: 28px;
+}
+
+
+.simple-link-button {
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    -webkit-transition: all .7s ease 0s;
+    -moz-transition: all .7s ease 0s;
+    -o-transition: all .7s ease 0s;
+    transition: all .7s ease 0s;
+}
+/* In-line links */
+.inline-link a {
+    text-decoration: none;
+    font-family: 'Helvetica';
+    font-size: .8em;
+    font-weight: 600;
+    -webkit-transition: all .35s ease 0s;
+    -moz-transition: all .35s ease 0s;
+    -o-transition: all .35s ease 0s;
+    transition: all .35s ease 0s;
+}
+
+.inline-link a:hover {
+    color: #2A2A2A;
+    -webkit-transition: all .35s ease 0s;
+    -moz-transition: all .35s ease 0s;
+    -o-transition: all .35s ease 0s;
+    transition: all .35s ease 0s;
+}
+
+.external-inline-link a {
+    text-decoration: none;
+    font-weight: 600;
+    -webkit-transition: all .35s ease 0s;
+    -moz-transition: all .35s ease 0s;
+    -o-transition: all .35s ease 0s;
+    transition: all .35s ease 0s;
+}
+
+.external-inline-link a:hover {
+    color: blue;
+    -webkit-transition: all .35s ease 0s;
+    -moz-transition: all .35s ease 0s;
+    -o-transition: all .35s ease 0s;
+    transition: all .35s ease 0s;
+}
+
+.notification {
+    font-family: 'Helvetica';
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* Writing (ie. blog) */
+.writing {
+    margin-top: 24px;
+    text-align: left;
+    font-family: 'Cardo';
+    color: #2A2A2A;
+}
+
+.writing header {
+    font-family: 'Helvetica';
+    font-size: 42px;
+    text-align: left;
+    font-weight: 300;
+    line-height: .8em;
+    padding: 0 48px 0 72px;
+    letter-spacing: .5px;
+}
+
+.writing h1 {
+    padding: 4px 48px 36px 72px;
+}
+
+.writing p {
+    font-size: 1.7em;
+    line-height: 1.5em;
+    padding: 4px 48px 36px 72px;
+}
+
+.writing ul {
+    font-size: 1.7em;
+    padding: 4px 48px 36px 72px;
+}
+
+.writing ul li {
+    padding: 24px 0 0 0;
+    font-family: 'Helvetica';
+    font-weight: 300;
+}
+
+.writing ol {
+
+}
+
+.writing ol li {
+    padding-left: 24px;
+}
+
+.whitespace {
+    background-color: white;
+    height: 60px;
+    width: 100%;
+}
+
+
+/* QUOTES page */
+.quote {
+    font-family: 'Cardo';
+    padding: 0px 48px 12px 48px;
+    text-align: left;
+    line-height: 150%;
+    font-size: 24px;
+    margin-top: 24px;
+}
+.quotee {
+    padding-right: 48px;
+    text-align: right;
+    font-size: 18px;
+    font-family: 'Cardo';
+}
+
+
+
+/* not included in the website: get this out of here, but keep safe */
+#business-card {
+    text-align: center;
+    font-family: 'Helvetica';
+    color: #2A2A2A;
+    font-weight: 200;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
