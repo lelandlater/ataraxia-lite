@@ -7,13 +7,13 @@ services:
       - "5000"
     volumes:
       - static:/uwsgi/app/static
-    links:
-      - nginx
   nginx:
     restart: always
     build: ./nginx
     ports:
       - "80:80"
+    links:
+      - web:web
 
 volumes:
   static:
