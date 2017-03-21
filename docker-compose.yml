@@ -1,7 +1,20 @@
 version: '3'
 services:
   web:
-    build: .
-    ports: 
-      - "80:8000"
-    command: "uwsgi --ini uwsgi.ini"
+    restart: always
+    build: ./web
+    expose:
+      - "5000"
+    volumes:
+      - static:/uwsgi/app/static
+    links:
+      - nginx
+  nginx:
+    restart: always
+    build: ./nginx
+    ports:
+      - "80:80"
+
+volumes:
+  static:
+

@@ -1,0 +1,67 @@
+AWSTemplateFormatVersion: '2010-09-09'
+# ataraxia.io bastion host 
+# 
+# S3 bucket --> ataraxia.io-cloudformation-bastion
+#
+#
+# Bastion stack creation prerequisite:  first create an EC2 key pair and a VPC stack.  
+# For details about how to connect to a Linux instance in a private subnet via the
+# bastion, see the following AWS blog post:
+# https://aws.amazon.com/blogs/security/securely-connect-to-linux-instances-running-in-a-private-amazon-vpc/
+
+Parameters:
+
+  NetworkStackName:
+    Description: Active CloudFormation stack containing VPC resources.
+    Type: String
+    MinLength: 1
+    MaxLength: 255
+    AllowedPattern: "^[a-zA-Z][-a-zA-Z0-9]*$"
+
+  KeyName:
+    Description: EC2 key pair name for bastion host SSH access
+    Type: String
+    MinLength: 1
+    MaxLength: 255
+    AllowedPattern: "[\\x20-\\x7E]*"
+    ConstraintDescription: Key pair name can contain only ASCII characters.
+
+Mappings:
+
+  AMIMap:  # Ubuntu 16.04 # change to alpine
+    us-west-2:  # add other availability zones when necessary
+      AMI: ami-16efb076
+
+Resources:
+
+  BastionHost:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      KeyName: !Ref KeyName
+      ImageId: !FindInMap [AMIMap, !Ref "AWS::Region", AMI]
+      SubnetId: !ImportValue
+        "Fn::Sub": "${NetworkStackName}-PublicSubnet1ID"
+      SecurityGroupIds:
+      - !ImportValue
+        "Fn::Sub": "${NetworkStackName}-BastionGroupID"
+      Tags:
+        -
+          Key: Name
+          Value: ataraxia.io-bastion
+
+  BastionEIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      InstanceId: !Ref BastionHost
+      Domain: vpc
+
+Outputs:
+
+  BastionIP:
+    Description: EIP for bastion host
+    Value: !Ref BastionEIP
+    Export:
+      Name: !Sub "${AWS::StackName}-BastionEIP"
+
+

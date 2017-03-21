@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+
+  NetworkStackName:
+    Description: Active CloudFormation stack containing VPC resources.
+    Type: String
+    MinLength: 1
+    MaxLength: 255
+    AllowedPattern: "^[a-zA-Z][-a-zA-Z0-9]*$"
+
+  KeyName:
+    Description: EC2 key pair name for nginx-uwsgi SSH access
+    Type: String
+    MinLength: 1
+    MaxLength: 255
+    AllowedPattern: "[\\x20-\\x7E]*"
+    ConstraintDescription: Key pair name can contain only ASCII characters.
+
+  Mappings:
