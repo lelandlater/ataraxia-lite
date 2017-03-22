@@ -4,6 +4,8 @@ MAINTAINER Leland Later '<leland@ataraxia.io>'
 
 RUN pip install -r requirements.txt
 
-EXPOSE 5000
+VOLUME /static
+
+EXPOSE 9000
 
 CMD uwsgi --ini uwsgi.ini

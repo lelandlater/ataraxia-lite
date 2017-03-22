@@ -1,19 +1,21 @@
 version: '3'
 services:
   web:
+    container_name: web1
     restart: always
     build: ./web
     expose:
-      - "5000"
+      - "9000"
     volumes:
-      - static:/uwsgi/app/static
+      - ./web/static:/src/app/static
   nginx:
+    container_name: nginx1
     restart: always
     build: ./nginx
     ports:
       - "80:80"
     links:
-      - web:web
+      - web
 
 volumes:
   static:
