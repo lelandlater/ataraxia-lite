@@ -7,7 +7,7 @@ services:
     expose:
       - "9000"
     volumes:
-      - ./web/static:/src/app/static
+      - static:/usr/src/app/static
   nginx:
     container_name: nginx1
     restart: always
@@ -16,7 +16,7 @@ services:
       - "80:80"
     links:
       - web
-
+    volumes:
+      - static:/static
 volumes:
   static:
-

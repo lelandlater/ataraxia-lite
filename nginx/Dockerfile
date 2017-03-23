@@ -1,6 +1,7 @@
 FROM smebberson/alpine-nginx:3.0.0
-RUN mkdir /etc/ssl/ataraxia-lite
+RUN mkdir -p /etc/ssl/ataraxia-lite
 RUN mkdir -p /etc/log/nginx
+RUN mkdir /static
 #COPY ./ssl/dhparams.pem /etc/ssl/ataraxia-lite
 #COPY ./ssl/ataraxia.io /etc/ssl/ataraxia-lite
 COPY ./sites-enabled /etc/nginx/sites-enabled

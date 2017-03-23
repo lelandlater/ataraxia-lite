@@ -16,6 +16,7 @@ class NavItem(object):
         self.homelogo = homelogo
 
 @app.route('/')
+@app.route('/index')
 def index():
 	nav = [NavItem(url_for('index'), ataraxia.encode('unicode-escape'), True),
            NavItem(url_for('contact'), 'CONTACT')]
@@ -29,4 +30,4 @@ def contact():
 	return html_minify(rendered)
 
 if __name__=='__main__':
-	app.run(host='0.0.0.0', port=9000, debug=True, use_reloader=False)
+	app.run(port=9000, debug=True, use_reloader=False)
