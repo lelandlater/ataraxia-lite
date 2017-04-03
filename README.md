@@ -8,7 +8,7 @@ _ataraxia-lite_ is written in Python using the [Flask](http://flask.pocoo.org) w
 _ataraxia-lite_ serves HTTPS traffic with [NGINX](https://www.nginx.com/resources/wiki/).
 
 ## Infrastructure
-_ataraxia-lite_ runs on a very small [EC2 instance on Amazon Web Services](https://aws.amazon.com/ec2/). The site leverages Docker and Docker Compose to containerize and run processes in logical insolation.
+_ataraxia-lite_ runs on a very small [EC2 instance on Amazon Web Services](https://aws.amazon.com/ec2/). The site leverages Docker and Docker Compose to containerize and run processes in logical isolation.
 
 ### Contact
 Reach Leland Later at [ataraxia.io/contact](https://ataraxia.io/contact).
