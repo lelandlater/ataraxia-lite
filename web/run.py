@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for
 from htmlmin.minify import html_minify
 
 app = Flask(__name__)
-app.config['SERVER_NAME'] = 'ataraxialocal'
+app.config['SERVER_NAME'] = 'ataraxia.io'
 
 """ATARAXIA in Greek."""
 ataraxia = '&#x3AC;&#x3C4;&#x3B1;&#x3C1;&#x3B1;&#x3BE;&#x3AF;&#x3B1;'
