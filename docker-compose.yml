@@ -17,24 +17,20 @@ services:
       - "443:443"
     links:
       - web
-      - letsencrypt
     volumes:
       - static:/static
-      - /etc/letsencrypt/
-      - /var/lib/letsencrypt/
+      - certs:/etc/letsencrypt
+      - certs_data:/data/letsencrypt
   letsencrypt:
-    container_name: letsencrypt1
-    # restart: always
-    image: quay.io/letsencrypt/letsencrypt:latest
-    command: bash -c "sleep 6 && certbot certonly --standalone -d ataraxia.io --text --agree-tos --email lelandlater@gmail.com --server https://acme-v01.api.letsencrypt.org/directory --rsa-key-size 4096 --verbose --renew-by-default --standalone-supported-challenges http-01"
-    entrypoint: ""
-    ports:
-      - "80"
-      - "443"
+    container_name: le1
+    image: deliverous/certbot
     volumes:
-      - le1:/etc/letsencrypt
-      - le2:/var/lib/letsencrypt
+      - certs:/etc/letsencrypt
+      - certs_data:/data/letsencrypt
+    command: "certonly --webroot --webroot-path=/data/letsencrypt \ 
+--renew-by-default -d ataraxia.io \ 
+--email lelandlater@gmail.com --agree-tos --non-interactive"
 volumes:
   static:
-  le1:
-  le2:
+  certs:
+  certs_data:
