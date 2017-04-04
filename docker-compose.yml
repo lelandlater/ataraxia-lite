@@ -14,9 +14,23 @@ services:
     build: ./nginx
     ports:
       - "80:80"
+      - "443:443"
     links:
       - web
     volumes:
       - static:/static
+      - certs:/etc/letsencrypt
+      - certs_data:/data/letsencrypt
+  letsencrypt:
+    container_name: le1
+    image: deliverous/certbot
+    volumes:
+      - certs:/etc/letsencrypt
+      - certs_data:/data/letsencrypt
+    command: "certonly --webroot --webroot-path=/data/letsencrypt \ 
+--renew-by-default -d ataraxia.io \ 
+--email lelandlater@gmail.com --agree-tos --non-interactive"
 volumes:
   static:
+  certs:
+  certs_data:
