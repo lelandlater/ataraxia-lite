@@ -10,53 +10,14 @@
                 <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}"/>
                 <link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}"/>
                 {% block links %}
-                
                 {% endblock %}
-                <!-- Google Fonts -->
-                <style>
-                    @import url('https://fonts.googleapis.com/css?family=Cardo|GFS+Didot');
-                </style>
-                </head>
-    
+    </head>
     <body>
-        <section class="wrapper">
-            <nav>
-                <ul>
-                    {% for navitem in navitems %}
-                    {% if navitem.homelogo == True %}
-                    <li id="homelogo"><a href="{{ navitem.func_url }}"><h1>&#x3AC;&#x3C4;&#x3B1;&#x3C1;&#x3B1;&#x3BE;&#x3AF;&#x3B1;</h1></a></li>
-                    {% else %}
-                    <li class="navitem"><a href="{{ navitem.func_url }}"><h1>{{ navitem.label }}</h1></a></li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-            </nav>
-            <header class="layout-header">{% block header %}{% endblock %}</header>
-            <section class="main">
-                <div class="box sidebar" id="sidebar-left">{% block recent %}{% endblock %}</div>
-                
-                <div class="box" id="middle-spacing"><!-- main content -->{% block content %}{% endblock %}</div>
-                
-                <div class="box sidebar" id="sidebar-right">{% block info %}{% endblock %}</div>
-                
-            </section> <!-- end of main content -->
-            <footer>
-                <div class="footernav">
-                    <ul>
-                        {% for footernavitem in footernavitems %}
-                        {% if footernavitem.selected %}
-                        <li><a class="selected" href="{{ footernavitem.func_url }}"><h1>{{ footernavitem.label }}</h1><a></li>
-                        {% else %}
-                        <li><a href="{{ footernavitem.func_url }}"><h1>{{ footernavitem.label }}</h1></a></li>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
-            </footer>
-        </section>
-
-        {% block scripts %}
-        {% endblock %}
-        
+        <section id="top-container">{% block top %}{% endblock %}</section>
+        <section id="logo-container">{% block logo %}{% endblock %}</section>
+        <section id="mid-container">{% block mid %}{% endblock %}</section>
+        <section id="body-container">{% block body %}{% endblock %}</section>
+        <section id="bottom-container">{% block bottom %}{% endblock %}</section>
+        {% block scripts %}{% endblock %}        
     </body>
 </html>

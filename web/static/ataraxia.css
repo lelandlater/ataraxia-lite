@@ -49,30 +49,10 @@
     font-weight: 100;
 }
 
-/* admin.index */
-#confirmation-sent-message,
-#already-exists-message {
-    display: none;
-    text-align: center;
-    color: #2A2A2A;
-    position: absolute;
-    top: 80%;
-    left: 18%;
-    z-index: 10;
-}
+/* .index */
 
-/* admin.projects */
-#samplepack-download {
- /*   display: none; */
-    text-align: center;
-    color: black;
-    position: absolute;
-    top: 80%;
-    left: 18%;
-    z-index: 10;
-}
 
-/* admin.contact */
+/* .contact */
 #contact-links {
     list-style: none;
     font-family: 'Helvetica';
@@ -110,58 +90,6 @@
 
 #contact-links ul li#linkedin a:hover {
     color: #007bb6;
-}
-
-#known-issues-list {
-    font-family: 'Helvetica';
-    font-size: 72px;
-    color: #D5D5D5;
-    margin: 36px 0 0 72px;
-}
-
-.projects-list {
-    display: table;
-    margin: 4px auto;
-    border-collapse: separate;
-    border-spacing: 0 36px;
-}
-
-.projects-list th {
-    display: none;
-}
-
-.projects-list td {
-    padding: 0 24px;
-}
-
-.sample-pack-logo {
-    color: black;
-    font-family: 'Helvetica';
-    font-size: 36px;
-    font-weight: 800;
-    padding-top: 36px;
-}
-
-#admin-login {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
-
-#admin-login a {
-    text-decoration: none;
-    font-family: 'Helvetica';
-    font-weight: 600;
-    color: #F3F3F3;
-}
-
-/* for the admin interface on the blog */
-
-#blog-testing-features {
-    position: absolute;
-    top: 4px;
-    left: 360px;
-
 }
 
 

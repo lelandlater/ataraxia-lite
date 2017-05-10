@@ -2,11 +2,39 @@
 {% extends "base.html" %}
 
 {% block links %}
-<link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}"/>
+<!-- Google Fonts -->
+<style>@import url('https://fonts.googleapis.com/css?family=Cardo|GFS+Didot');</style>
+<!-- CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='ataraxia.css') }}"/>
 {% endblock %}
 
-{% block content %}
-<h1 class="ataraxia-logo logo-large ataraxia-primary">&#x3AC;&#x3C4;&#x3B1;&#x3C1;&#x3B1;&#x3BE;&#x3AF;&#x3B1;</h1>
+{% block top %}
+<div class="nav-horizontal">
+	<div class="nav-horizontal-left">
+	</div>
+
+	{% }
+	<div class="nav-horizontal-left-item">
+	</div>
+</div>
+{% endblock %}
+
+{% block logo %}
+<div class="logo">
+	<h1 class="ataraxia-logo logo-large ataraxia-primary">&#x3AC;&#x3C4;&#x3B1;&#x3C1;&#x3B1;&#x3BE;&#x3AF;&#x3B1;</h1>
+</div>
+{% endblock %}
+
+{% block mid %}
+{% endblock %}
+
+{% block body %}
+<div class="content">
+
+</div>
+{% endblock %}
+
+{% block bottom %}
 {% endblock %}
 
 {% block scripts %}

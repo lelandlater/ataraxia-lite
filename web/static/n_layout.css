@@ -1,0 +1,35 @@
+#top-container {
+	display: inline-flex;
+}
+
+#logo-container {
+	display: inline-flex;
+}
+
+#mid-container {
+	display: inline-flex;
+}
+
+#body-container {
+	display: inline-flex;
+	flex-flow: column wrap;
+}
+
+#bottom-container {
+	display: inline-flex;
+}
+
+.nav-horizontal {
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+.nav-vertical {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.content {
+	
+}
