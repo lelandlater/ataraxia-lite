@@ -1,0 +1,32 @@
+{# templates/contact.html #}
+{% extends "base.html" %}
+
+{% block links %}
+<!-- Google Fonts -->
+<style>@import url('https://fonts.googleapis.com/css?family=Cardo|GFS+Didot');</style>
+<!-- CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='ataraxia.css') }}"/>
+{% endblock %}
+
+{% block top %}
+{% endblock %}
+
+{% block logo %}
+{% endblock %}
+
+{% block mid %}
+{% endblock %}
+
+{% block body %}
+<div class="content">
+	<div class="contact-links">
+	{% for link in contact_links}
+	</div>
+</div>
+{% endblock %}
+
+{% block bottom %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

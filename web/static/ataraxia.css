@@ -16,18 +16,7 @@
 
 .ataraxia-logo {
     font-family: 'GFS Didot', 'Times New Roman', serif;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.logo-medium {
-    font-size: 72px;
-    margin-top: 48px;
-}
-
-.logo-large {
-    font-size: 144px;
-    margin-top: 48px;
 }
 
 #cue-entry:hover {
@@ -54,22 +43,9 @@
 
 /* .contact */
 #contact-links {
-    list-style: none;
     font-family: 'Helvetica';
-    font-size: 36px;
-    width: 200px;
-    text-align: left;
-    margin-left: 30px;
-}
-
-#contact-links li {
-    list-style: none;
-    display: inline;
-}
-
-#contact-links ul li a {
     text-decoration: none;
-    display: block;
+    display: fle;
     color: #D5D5D5;
     font-style: normal;
     -webkit-transition: all .5s ease 0s;
@@ -78,17 +54,12 @@
     transition: all .5s ease 0s;
 }
 
-#contact-links ul li a:hover {
-    text-decoration: none;
-    color: #2A2A2A;
-    font-style: normal;
-}
 
-#contact-links ul li#twitter a:hover {
+#contact-links #twitter a:hover {
     color: #00ACED;
 }
 
-#contact-links ul li#linkedin a:hover {
+#contact-links #linkedin a:hover {
     color: #007bb6;
 }
 

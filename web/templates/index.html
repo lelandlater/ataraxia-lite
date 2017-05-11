@@ -11,17 +11,22 @@
 {% block top %}
 <div class="nav-horizontal">
 	<div class="nav-horizontal-left">
+		{% for item in nav.start %}
+		<div class="nav-horizontal-left-item"><a href="{{ item.url }}"><h1 class="simple-link-button">{{ item.label }}</h1></a></div>
+		{% endfor %}
 	</div>
 
-	{% }
-	<div class="nav-horizontal-left-item">
+	<div class="nav-horizontal-right">
+		{% for item in nav.end %}
+		<div class="nav-horizontal-right-item"><a href="{{ item.url }}"><h1 class="simple-link-button">{{ item.label }}</h1></a></div>
+		{% endfor %}
 	</div>
 </div>
 {% endblock %}
 
 {% block logo %}
 <div class="logo">
-	<h1 class="ataraxia-logo logo-large ataraxia-primary">&#x3AC;&#x3C4;&#x3B1;&#x3C1;&#x3B1;&#x3BE;&#x3AF;&#x3B1;</h1>
+	<h1 class="ataraxia-logo ataraxia-primary">&#x3AC;&#x3C4;&#x3B1;&#x3C1;&#x3B1;&#x3BE;&#x3AF;&#x3B1;</h1>
 </div>
 {% endblock %}
 
