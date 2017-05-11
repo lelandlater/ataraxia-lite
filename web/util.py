@@ -21,15 +21,24 @@ class ContactLink(object):
 	URL, label, and brand color.
 	"""
 	def __init__(self, url, label, color=None):
-		self.url = url
-		self.label = label
+		self._url = url
+		self._label = label
 
 		if color is not None:
-			set_color(color)
+			self.set_color(color)
 		else:
-			self.color = None
+			self._color = None
+
+	def _get_url(self):
+		return self._url
+
+	def _get_label(self):
+		return self._label
+
+	def _get_color(self):
+		return self._color
 
 	# check if color is acceptable hexadecimal value or CSS built-in.
 	def set_color(self, color):
 		# TODO hex logic
-		self.color = color
+		self._color = color

@@ -23,7 +23,11 @@ def index():
 """Display contact links and link back to index page."""
 @app.route('/contact')
 def contact():
-	nav = NavBar([NavItem(url_for('index'), ataraxia.encode('unicode-escape'))], [NavItem(url_for('contact'), 'CONTACT')])
+	nav = NavBar([NavItem(url_for('index'), ataraxia)], [])
+	links = [ContactLink('https://github.com/lelandlater', 'GITHUB', '4078c0'),
+	         ContactLink('https://twitter.com/lelandlater', 'TWITTER', '00aced'),
+	         ContactLink('https://linkedin.com/lelandlater', 'LINKEDIN', '0077b5'),
+	         ContactLink('https://bitbucket.org/lelandlater', 'BITBUCKET', '205081')]
 	rendered = render_template('contact.html', nav=nav, links=links)
 	return html_minify(rendered)
 

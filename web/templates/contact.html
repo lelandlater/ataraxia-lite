@@ -9,6 +9,17 @@
 {% endblock %}
 
 {% block top %}
+<div class="nav-horizontal">
+	{% for item in nav.start %}
+		<div class="nav-horizontal-left-item"><a href="{{ item.url }}"><h1 class="simple-link-button">{{ item.label }}</h1></a></div>
+	{% endfor %}
+</div>
+
+<div class="nav-horizontal-right">
+	{% for item in nav.end %}
+		<div class="nav-horizontal-right-item"><a href="{{ item.url }}"><h1 class="simple-link-button">{{ item.label }}</h1></a></div>
+	{% endfor %}
+</div>
 {% endblock %}
 
 {% block logo %}
@@ -18,11 +29,11 @@
 {% endblock %}
 
 {% block body %}
-<div class="content">
 	<div class="contact-links">
-	{% for link in contact_links}
+	{% for link in links %}
+		<div><a class="contact-links-item" href="{{ link._get_url() }}"><h1>{{ link._get_label() }}</h1></a></div>
+	{% endfor %}
 	</div>
-</div>
 {% endblock %}
 
 {% block bottom %}

@@ -37,30 +37,3 @@
     font-family: 'Helvetica';
     font-weight: 100;
 }
-
-/* .index */
-
-
-/* .contact */
-#contact-links {
-    font-family: 'Helvetica';
-    text-decoration: none;
-    display: fle;
-    color: #D5D5D5;
-    font-style: normal;
-    -webkit-transition: all .5s ease 0s;
-    -moz-transition: all .5s ease 0s;
-    -o-transition: all .5s ease 0s;
-    transition: all .5s ease 0s;
-}
-
-
-#contact-links #twitter a:hover {
-    color: #00ACED;
-}
-
-#contact-links #linkedin a:hover {
-    color: #007bb6;
-}
-
-
