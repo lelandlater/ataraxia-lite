@@ -1,14 +1,14 @@
 from flask import Flask, render_template, url_for
 from htmlmin.minify import html_minify
-import HTMLParser
+import html.parser
 from util import NavBar, NavItem, ContactLink
 
 app = Flask(__name__)
-app.config['SERVER_NAME'] = 'ataraxialocal'
+app.config['SERVER_NAME'] = 'ataraxia.io'
 
 
 """ATARAXIA in Greek."""
-hparser=HTMLParser.HTMLParser()
+hparser=html.parser.HTMLParser()
 ataraxia='&#x3AC;&#x3C4;&#x3B1;&#x3C1;&#x3B1;&#x3BE;&#x3AF;&#x3B1;'
 ataraxia=hparser.unescape(ataraxia)
 
